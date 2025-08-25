@@ -1,0 +1,155 @@
+{
+	"$schema": "https://biomejs.dev/schemas/2.2.2/schema.json",
+	"files": { "includes": ["**", "!.next"] },
+	"vcs": { "clientKind": "git", "defaultBranch": "main" },
+	"linter": {
+		"enabled": true,
+		"includes": ["src/**"],
+		"domains": { "next": "recommended" },
+		"rules": {
+			"recommended": false,
+			"a11y": {
+				"noAriaUnsupportedElements": "warn",
+				"useAltText": "warn",
+				"useAriaPropsForRole": "error",
+				"useValidAriaProps": "warn",
+				"useValidAriaValues": "error",
+				"useButtonType": "error",
+				"noPositiveTabindex": "error",
+				"useSemanticElements": "error",
+				"noAriaHiddenOnFocusable": "error",
+				"useValidLang": "error",
+				"useHeadingContent": "error",
+				"useValidAriaRole": "error",
+				"useValidAnchor": "error",
+				"useAriaPropsSupportedByRole": "error",
+				"noStaticElementInteractions": "error",
+				"useValidAutocomplete": "error"
+			},
+			"complexity": {
+				"noUselessTypeConstraint": "error",
+				"noUselessEmptyExport": "error",
+				"useDateNow": "error",
+				"noArguments": "error"
+			},
+			"correctness": {
+				"noChildrenProp": "error",
+				"noConstAssign": "off",
+				"noGlobalObjectCalls": "off",
+				"noInvalidBuiltinInstantiation": "error",
+				"noInvalidConstructorSuper": "off",
+				"noSetterReturn": "off",
+				"noUndeclaredVariables": "off",
+				"noUnreachable": "off",
+				"noUnreachableSuper": "off",
+				"noUnusedVariables": "error",
+				"useExhaustiveDependencies": "warn",
+				"useHookAtTopLevel": "error",
+				"useJsxKeyInIterable": "error",
+				"noUnusedImports": "error",
+				"noUnusedPrivateClassMembers": "error"
+			},
+			"security": {
+				"noDangerouslySetInnerHtmlWithChildren": "error",
+				"noBlankTarget": "error"
+			},
+			"style": {
+				"noNamespace": "error",
+				"useAsConstAssertion": "error",
+				"useConst": "error",
+				"useImportType": "error",
+				"useExportType": "error",
+				"useNamingConvention": "error",
+				"useLiteralEnumMembers": "error",
+				"useShorthandFunctionType": "error",
+				"useEnumInitializers": "error",
+				"noParameterProperties": "error",
+				"noInferrableTypes": "error",
+				"useConsistentArrayType": "error",
+				"useThrowNewError": "error",
+				"useNumberNamespace": "error",
+				"useNodejsImportProtocol": "error",
+				"noImplicitBoolean": "error",
+				"useTemplate": "error",
+				"useShorthandAssign": "error",
+				"useSingleVarDeclarator": "error",
+				"useConsistentBuiltinInstantiation": "error",
+				"useFilenamingConvention": {
+					"level": "error",
+					"options": {
+						"strictCase": false,
+						"requireAscii": true,
+						"filenameCases": ["kebab-case"]
+					}
+				},
+				"useArrayLiterals": "off",
+				"noCommonJs": "error",
+				"useTrimStartEnd": "error",
+				"noSubstr": "error",
+				"useAtIndex": "error",
+				"useConsistentCurlyBraces": "error",
+				"noProcessEnv": "warn"
+			},
+			"suspicious": {
+				"noClassAssign": "off",
+				"noCommentText": "error",
+				"noDuplicateClassMembers": "off",
+				"noDuplicateJsxProps": "error",
+				"noDuplicateObjectKeys": "error",
+				"noDuplicateParameters": "off",
+				"noExplicitAny": "error",
+				"noExtraNonNullAssertion": "error",
+				"noFunctionAssign": "off",
+				"noImportAssign": "off",
+				"noMisleadingInstantiator": "error",
+				"noRedeclare": "off",
+				"noUnsafeDeclarationMerging": "error",
+				"noUnsafeNegation": "off",
+				"useGetterReturn": "off",
+				"useNamespaceKeyword": "error",
+				"noEmptyBlockStatements": "error",
+				"noEmptyInterface": "error",
+				"useAwait": "error",
+				"useNumberToFixedDigitsArgument": "error",
+				"noThenProperty": "error",
+				"useIsArray": "error",
+				"useErrorMessage": "error",
+				"noArrayIndexKey": "error",
+				"noWith": "off",
+				"noVar": "error",
+				"noDocumentCookie": "error"
+			},
+			"nursery": {
+				"noSecrets": "warn"
+			},
+			"performance": {
+				"noImgElement": "error"
+			}
+		}
+	},
+	"assist": {
+		"includes": ["src/**"],
+		"actions": {
+			"source": {
+				"organizeImports": {
+					"level": "on",
+					"options": { "groups": [[":BUN:", ":NODE:"], ":BLANK_LINE:", "@/**"] }
+				}
+			}
+		}
+	},
+	"formatter": { "indentStyle": "tab", "lineWidth": 100 },
+	"javascript": {
+		"formatter": { "quoteStyle": "single", "semicolons": "asNeeded" }
+	},
+	"overrides": [
+		{
+			"includes": ["package.json"],
+			"json": {
+				"formatter": {
+					"expand": "auto"
+				}
+			}
+		}
+	]
+}

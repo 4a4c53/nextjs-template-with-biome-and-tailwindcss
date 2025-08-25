@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root {
+	--background: oklch(0.9683 0.0054 117.92);
+	--foreground: oklch(0.2537 0.0035 164.78);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: oklch(0.2537 0.0035 164.78);
+		--foreground: oklch(0.9683 0.0054 117.92);
+	}
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+}
+
+body {
+	background: var(--color-background);
+	color: var(--color-foreground);
+}
